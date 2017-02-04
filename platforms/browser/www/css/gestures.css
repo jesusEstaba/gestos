@@ -18,14 +18,16 @@ button{
 	padding: 30px;
 	font-size: 1em;
 	margin-top: 10px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.16);
 }
 
 #zona-gestos{
 	width: 100%;
 	background-color: #7fba67;
 	margin-top: 10px;
-	min-height: 300px;
+	min-height: 250px;
 	display: block;
+	box-shadow: 0 2px 5px rgba(0,0,0,.16);
 }
 
 #info{
@@ -51,8 +53,12 @@ button{
 	-webkit-animation: swipe-izquierda 1s 1;
 }
 
-#zona-gestos.rotate{
-	-webkit-animation: rotate 1.5s 1;
+#zona-gestos.rotate-derecha{
+	-webkit-animation: rotate-derecha 1.5s 1;
+}
+
+#zona-gestos.rotate-izquierda{
+	-webkit-animation: rotate-izquierda 1.5s 1;
 }
 
 @-webkit-keyframes pulsacion{
@@ -91,9 +97,15 @@ button{
 	}
 }
 
-@-webkit-keyframes rotate{
+@-webkit-keyframes rotate-derecha{
 	100%{
-		-webkit-transform: rotate(1turn);
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotate-izquierda{
+	100%{
+		-webkit-transform: rotate(-360deg);
 	}
 }
 

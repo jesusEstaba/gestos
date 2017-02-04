@@ -1,5 +1,6 @@
 var app = {
 	inicio: function() {
+		//alert("Iniciando App");
 		this.inicioBotones();
 		this.iniciaFastclick();
 		this.iniciaHammer();
@@ -59,9 +60,18 @@ var app = {
 
 		hammertime.on('rotate', function(e){
 			var umbral = 25;
+			var direction = e.direction;
 
 			if (e.distance > umbral) {
-				zona.className = 'rotate';
+				//alert(e.direction);
+
+				if (direction==4) {
+					clase = 'rotate-derecha';
+				} else if (direction==2) {
+					clase = 'rotate-izquierda';
+				}
+
+				zona.className = clase;
 			}
 		});
 	}
