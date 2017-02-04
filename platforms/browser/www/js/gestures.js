@@ -43,6 +43,27 @@ var app = {
 		hammertime.on('press', function(e){
 			zona.className = 'press';
 		});
+
+		hammertime.on('swipe', function(e){
+			var clase = undefined;
+			var direction = e.direction;
+
+			if (direction==4) {
+				clase = 'swipe-derecha';
+			} else if (direction==2) {
+				clase = 'swipe-izquierda';
+			}
+
+			zona.className = clase;
+		});
+
+		hammertime.on('rotate', function(e){
+			var umbral = 25;
+
+			if (e.distance > umbral) {
+				zona.className = 'rotate';
+			}
+		});
 	}
 };
 
