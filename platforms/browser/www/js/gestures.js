@@ -11,7 +11,7 @@ var app = {
 		document.body.className = 'claro';
 	},
 
-	setOscuro: function()(){
+	setOscuro: function(){
 		document.body.className = 'oscuro';
 	}
 };
